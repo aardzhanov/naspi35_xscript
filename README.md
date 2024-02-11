@@ -9,7 +9,12 @@ Debian for Raspberry Pi: https://raspi.debian.net/
 
 ## Prepare
 
-- add **dtoverlay=pwm-2chan** to */boot/firmware/config.txt*
+- add **dtoverlay=pwm-2chan** to */boot/firmware/config.txt*\
+(for persistent after reboot add to /etc/default/raspi-firmware-custom)
+```shell
+root@rpi:~# cat /etc/default/raspi-firmware-custom
+dtoverlay=pwm-2chan
+```
 - add **iomem=relaxed** to */boot/firmware/cmdline.txt*
 
 
