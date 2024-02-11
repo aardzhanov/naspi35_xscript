@@ -1,0 +1,10 @@
+[Unit]
+Description=Run Hardware Power Management & Safe Shutdown daemon
+
+[Service]
+ExecStart=/usr/local/bin/pwr-rpi.py
+Type=simple
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
